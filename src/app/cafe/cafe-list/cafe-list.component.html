@@ -1,0 +1,37 @@
+<div class="container-header">
+  <img src="assets/header.jpg" alt="Header café" />
+</div>
+<div class="container-left">
+  <table class="table" aria-label="List of cafes">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Región</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let cafe of cafes">
+      <tr>
+        <td class="fw-bold">{{ cafe.id }}</td>
+        <td>{{ cafe.nombre }}</td>
+        <td>{{ cafe.tipo }}</td>
+        <td>{{ cafe.region }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Total café de origen: {{ totalCafesOrigen }}</p>
+  <p>Total café blend: {{ totalCafesBlend }}</p>
+</div>
+<footer class="container pt-5">
+  <div class="row">
+    <div class="col">
+      <p class="text-center text-muted">
+        Contact us: +57 3102105253 -
+        <a href="mailto:info@elaromamagico.com"> info@elaromamagico.com</a>
+
+        @elaromamagico
+      </p>
+    </div>
+  </div>
+</footer>
