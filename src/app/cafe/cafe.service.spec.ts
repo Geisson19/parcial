@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
-
+import { TestBed, inject } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CafeService } from './cafe.service';
 
-describe('CafeService', () => {
-  let service: CafeService;
-
+describe('Service: Book', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(CafeService);
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [CafeService],
+    });
   });
 
-  it('should be created', () => {
+  it('should ...', inject([CafeService], (service: CafeService) => {
     expect(service).toBeTruthy();
-  });
+  }));
 });
